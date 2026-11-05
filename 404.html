@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#0a0119">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+    <meta name="referrer" content="no-referrer">
+    <title>Шифры — мы в эфире</title>
+    <meta name="description" content="Усиление инфраструктуры. Всё под контролем. Скоро проявимся.">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <style>
+        /* Единая опорная величина: всё в rem масштабируется от телефона до 4K и уважает настройку шрифта браузера. */
+        html {
+            font-size: clamp(1rem, .6rem + .5vw, 1.5rem);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: radial-gradient(ellipse, #140330 15%, #0a0119 40%, #050010 100%) fixed;
+            min-block-size: 100vh;
+            min-block-size: 100dvh;
+            display: grid;
+            place-items: center;
+            padding: clamp(1rem, 4vw, 2.5rem);
+            color: #ededed;
+        }
+
+        .card {
+            inline-size: min(100%, 37.5rem);
+            background: rgba(30, 10, 50, .85);
+            border: 1px solid rgba(192, 132, 252, .2);
+            border-radius: 1rem;
+            box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, .5);
+            padding: clamp(1.75rem, 6vw, 3rem) clamp(1.25rem, 5vw, 2.5rem);
+            text-align: center;
+        }
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            color: #9ca3af;
+            font-size: .875rem;
+            margin-block-end: 1.5rem;
+        }
+
+        .status::before {
+            content: "";
+            inline-size: .5rem;
+            block-size: .5rem;
+            border-radius: 50%;
+            background: #4ade80;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .status::before {
+                animation: pulse 2.4s ease-in-out infinite;
+            }
+        }
+
+        @keyframes pulse {
+            50% {
+                opacity: .35;
+            }
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-block-end: 1rem;
+            text-wrap: balance;
+        }
+
+        p {
+            color: #d1d5db;
+            font-size: 1.0625rem;
+            line-height: 1.6;
+            margin-block-end: .75rem;
+            text-wrap: pretty;
+        }
+
+        .divider {
+            block-size: 1px;
+            background: linear-gradient(90deg, transparent, rgba(192, 132, 252, .5), transparent);
+            margin-block: clamp(1.5rem, 5vw, 2rem);
+        }
+
+        .footer {
+            color: #9ca3af;
+            font-size: .875rem;
+            margin-block: 1.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="status">Мы в эфире</div>
+        <h1>Усиление инфраструктуры. Всё под контролем.</h1>
+        <p>Скоро проявимся.</p>
+        <div class="divider"></div>
+        <p class="footer">Шифры</p>
+    </main>
+</body>
+</html>

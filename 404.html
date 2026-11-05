@@ -7,8 +7,8 @@
     <meta name="theme-color" content="#0a0119">
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
     <meta name="referrer" content="no-referrer">
-    <title>Шифры — мы в эфире</title>
-    <meta name="description" content="Усиление инфраструктуры. Всё под контролем. Скоро проявимся.">
+    <title>Сайт невидим</title>
+    <meta name="description" content="В связи с кибератакой идёт усиление защиты.">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <style>
         /* Единая опорная величина: всё в rem масштабируется от телефона до 4K и уважает настройку шрифта браузера. */
@@ -43,33 +43,10 @@
             text-align: center;
         }
 
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: .5rem;
-            color: #9ca3af;
-            font-size: .875rem;
+        .icon {
+            font-size: clamp(3rem, 2.4rem + 2vw, 4rem);
+            line-height: 1;
             margin-block-end: 1.5rem;
-        }
-
-        .status::before {
-            content: "";
-            inline-size: .5rem;
-            block-size: .5rem;
-            border-radius: 50%;
-            background: #4ade80;
-        }
-
-        @media (prefers-reduced-motion: no-preference) {
-            .status::before {
-                animation: pulse 2.4s ease-in-out infinite;
-            }
-        }
-
-        @keyframes pulse {
-            50% {
-                opacity: .35;
-            }
         }
 
         h1 {
@@ -83,7 +60,7 @@
 
         p {
             color: #d1d5db;
-            font-size: 1.0625rem;
+            font-size: 1.125rem;
             line-height: 1.6;
             margin-block-end: .75rem;
             text-wrap: pretty;
@@ -98,17 +75,17 @@
         .footer {
             color: #9ca3af;
             font-size: .875rem;
-            margin-block: 1.5rem 0;
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <main class="card">
-        <div class="status">Мы в эфире</div>
-        <h1>Усиление инфраструктуры. Всё под контролем.</h1>
-        <p>Скоро проявимся.</p>
+        <div class="icon">🛡️</div>
+        <h1>Сайт невидим</h1>
+        <p>В связи с кибератакой идёт усиление защиты.</p>
         <div class="divider"></div>
-        <p class="footer">Шифры</p>
+        <p class="footer">Код защиты: Шифры</p>
     </main>
 </body>
 </html>
